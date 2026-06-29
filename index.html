@@ -1,26 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Delta Trading</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📈 Delta Trading</title>
+
+    <link rel="icon" href="favicon.ico">
+
     <style>
         html, body {
             margin: 0;
+            width: 100%;
             height: 100%;
             overflow: hidden;
+            background: #0a0e1a;
         }
 
         iframe {
             width: 100%;
             height: 100%;
-            border: 0;
+            border: none;
+        }
+
+        /* Loading screen */
+        #loading {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0a0e1a;
+            color: white;
+            font-family: Arial;
+            font-size: 20px;
+            z-index: 9999;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #444;
+            border-top: 4px solid #3b82f6;
+            border-radius: 50%;
+            animation: spin .8s linear infinite;
+            margin-right: 15px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
         }
     </style>
 </head>
 
 <body>
 
+<div id="loading">
+    <div class="spinner"></div>
+    Loading Delta Trading...
+</div>
+
 <iframe
-    src="https://script.google.com/macros/s/AKfycbz7abgob_-PRmUDP3Z91-yhnGP8ZYhN_TXRlP3jvKpyU0oYzOA6DfTui_nsa6oCE9P5yg/exec">
+    id="app"
+    src="https://script.google.com/macros/s/AKfycbz7abgob_-PRmUDP3Z91-yhnGP8ZYhN_TXRlP3jvKpyU0oYzOA6DfTui_nsa6oCE9P5yg/exec"
+    onload="document.getElementById('loading').style.display='none'">
 </iframe>
 
 </body>
