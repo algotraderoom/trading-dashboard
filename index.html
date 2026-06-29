@@ -1,38 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delta Trading</title>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+
 <body>
 
-<div id="loading">
-    <div class="logo">📈</div>
-
-    <div class="title">
-        DELTA <span>TRADING</span>
-    </div>
-
-    <div class="subtitle">
-        Loading Dashboard...
-    </div>
-
-    <div class="loader">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
-
 <iframe
-    id="app"
-    src="https://script.google.com/macros/s/AKfycbz7abgob_-PRmUDP3Z91-yhnGP8ZYhN_TXRlP3jvKpyU0oYzOA6DfTui_nsa6oCE9P5yg/exec"
-    onload="hideLoader()">
+    src="https://script.google.com/macros/s/AKfycbz7abgob_-PRmUDP3Z91-yhnGP8ZYhN_TXRlP3jvKpyU0oYzOA6DfTui_nsa6oCE9P5yg/exec">
 </iframe>
 
-<script>
-function hideLoader(){
-    document.getElementById("loading").classList.add("fade-out");
-    setTimeout(()=>{
-        document.getElementById("loading").style.display="none";
-    },600);
-}
-</script>
-
 </body>
+</html>
